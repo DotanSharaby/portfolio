@@ -1,0 +1,56 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-image: url('https://i.imgur.com/M76aKps.png');
+  background-size: cover;
+  font-family: pokeFont, sans-serif;
+  
+}
+
+header {
+  text-align: center;
+  color: #ffcb05;
+  text-decoration: underline;
+  font-size: 3em;
+  text-shadow: 4px 4px 2px rgb(28, 81, 144);
+}
+
+footer {
+  background-color: black;
+  text-align: center;
+  color: lightblue;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@font-face {
+  font-family: pokeFont;
+  src: url(font/Pokemon\Solid.ttf);
+}
+
+.game-start {
+  text-shadow: 2px 2px #ffcb05;
+}
+
+.start-btn {
+  color: lightblue;
+}
+
+.pika-gif img {
+  width: 150px;
+}
