@@ -6,7 +6,7 @@ var gProjs = createProjs();
 function createProjs(){
     return [
         createProj('Site-no-grid','pixel perfect site','site desc','10/2019',['three','four'],'https://i.imgur.com/JSs4m7e.jpg'),
-        createProj('Guess-Me','guess me game','guess me game desc','10/2019',['one','two'])
+        createProj('Guess-Me','guess me game','guess me game desc','10/2019',['one','two'],'https://i.imgur.com/KbtwT3A.jpg')
     ]
 }
 

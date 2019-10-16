@@ -40,7 +40,7 @@ main {
 
 @font-face {
   font-family: pokeFont;
-  src: url(font/Pokemon\Solid.ttf);
+  src: url(../font/Pokemon\ Solid.ttf);
 }
 
 .game-start {

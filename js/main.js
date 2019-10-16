@@ -13,7 +13,7 @@ function renderProjs() {
                         <i class="fa fa-plus fa-3x"></i>
                         </div>
                     </div>
-                    <img class="img-fluid" src="${proj.img}" alt="">
+                    <img class="img-fluid" src=${proj.img} alt="">
                     </a>
                     <div class="portfolio-caption">
                     <h4>${proj.name}</h4>
@@ -30,20 +30,23 @@ function renderModal(itemId) {
     var proj = projs.find(function (proj) {
         return proj.id === itemId;
     })
-    var strHTMLs = `<h2>${proj.name}</h2>
+    var strHTML = `<h2>${proj.name}</h2>
                     <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                    <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="">
+                    <img class="img-fluid d-block mx-auto" src=${proj.img} alt="">
                     <p>${proj.desc}</p>
                     <ul class="list-inline">
-                    <li>Date: January 2017</li>
+                    <li>Date: ${proj.publishedAt}</li>
                     <li>Client: Threads</li>
                     <li>Category: Illustration</li>
                     </ul>
+                    `// change button class 
+                    `
+                    <a href="${proj.url}/index.html" target="_blank" class="button">Check it out</a>
                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                         <i class="fa fa-times"></i>
                         Close Project</button>`;
 
     var elContainer = document.querySelector('.modal-body');
-    elContainer.innerHTML = strHTMLs;
+    elContainer.innerHTML = strHTML;
 
 }
