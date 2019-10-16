@@ -1,6 +1,5 @@
 'use strict';
 
-
 renderProjs();
 
 function renderProjs() {
@@ -30,6 +29,7 @@ function renderModal(itemId) {
     var proj = projs.find(function (proj) {
         return proj.id === itemId;
     })
+    $('.offcanvas-btn').hide();
     var strHTML = `<h2>${proj.name}</h2>
                     <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                     <img class="img-fluid d-block mx-auto" src=${proj.img} alt="">
@@ -39,14 +39,15 @@ function renderModal(itemId) {
                     <li>Client: Threads</li>
                     <li>Category: Illustration</li>
                     </ul>
-                    `// change button class 
-                    `
                     <a href="${proj.url}/index.html" target="_blank" class="button">Check it out</a>
-                    <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <button onclick="showContact()" class="btn btn-primary" data-dismiss="modal" type="button">
                         <i class="fa fa-times"></i>
                         Close Project</button>`;
 
     var elContainer = document.querySelector('.modal-body');
     elContainer.innerHTML = strHTML;
+}
 
+function showContact(){
+    $('.offcanvas-btn').show();
 }

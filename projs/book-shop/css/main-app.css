@@ -1,0 +1,86 @@
+body {
+    background-color: aliceblue;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+body.rtl {
+    direction: rtl;
+}
+
+body.rtl .btn-delete {
+    float: left;
+}
+
+h1 {
+    padding: 20px;
+    font-weight: bold;
+    font-family: cursive;
+    text-decoration: underline;
+}
+
+thead tr {
+    display: flex;
+    flex-direction: row;
+}
+
+.title-header,
+.price-header,
+.cover-header {
+    flex-grow: 1;
+}
+
+.id-header {
+    flex-grow: 1.5
+}
+
+.actions-header {
+    flex-grow: 7;
+}
+
+.table-container,
+th,
+td {
+    border: 2px solid black;
+    padding: 10px;
+}
+
+td {
+    min-width: 120px;
+}
+
+.table-container {
+    margin: 0 auto;
+    width: 400px;
+}
+
+.books-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.book-img {
+    border: 1px solid red;
+}
+
+.book-btn {
+    width: 95px;
+    height: 40px;
+    margin: 2px;
+}
+
+.add-container {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin: auto;
+    padding: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+.modal-book-img {
+    max-height: 250px;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/main-app.css">
+    <title>Book Store</title>
+</head>
+
+<body onload="onInit()">
+    <h1 data-trans="title">Welcome to My Book Store!</h1>
+
+    <select onchange="onSetLang(this.value)">
+        <option value="en">English</option>
+        <option value="he">עברית</option>
+    </select>
+
+    <table class="table-container">
+        <thead>
+            <th data-trans="book-id" class="id-header">Id</th>
+            <th data-trans="book-title" class="title-header">Title</th>
+            <th data-trans="book-price" class="price-header">Price</th>
+            <th data-trans="book-cover" class="cover-header">Cover</th>
+            <th data-trans="book-actions" class="actions-header">Actions</th>
+        </thead>
+        <tbody class="books-container"></tbody>
+    </table>
+
+    <div class="add-container">
+        <input data-trans="add-bookname-placeholder" type="text" class="name-input" placeholder="Book Name">
+        <input data-trans="add-price-placeholder" type="text" class="price-input" placeholder="Price">
+        <button data-trans="add-btn" class="add-btn w3-btn w3-ripple w3-gray" onclick="readAndAddNewBook()">Add new Book</button>
+    </div>
+
+
+    <div id="id01" class="w3-modal">
+        <div class="w3-modal-content">
+            <div class="w3-container">
+                <span onclick="closeModal()"
+                    class="w3-button w3-display-topright">&times;</span>
+                <h3 class="book-title"></h3>
+                <div class="modal-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/util.js"></script>
+    <script src="js/i18n-service.js"></script>
+    <script src="js/book-service.js"></script>
+    <script src="js/book-controller.js"></script>
+</body>
+
+</html>
